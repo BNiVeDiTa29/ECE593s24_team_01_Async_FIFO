@@ -1,0 +1,620 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+cd {C:\Users\LENOVO\OneDrive\Desktop\ece593s24_team_01_Asyn_FIFO_M1}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:10 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source fifo1.sv 
+# -- Compiling module synchronizer
+# -- Compiling module write_ptr
+# -- Compiling module read_ptr
+###### ** while parsing file included at fifo1.sv(3)
+# ** at read_ptr.sv(15): 	assign empty = (rq2_wptr == g_inc_rptr);
+# 
+# ** Warning: ** while parsing file included at fifo1.sv(3)
+# ** at read_ptr.sv(15): (vlog-2623) Undefined variable: empty.
+# -- Compiling module fifo_mem
+# -- Compiling module asynchronous_fifo
+# 
+# Top level modules:
+# 	asynchronous_fifo
+# End time: 20:56:10 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:10 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source fifomem.sv 
+# -- Compiling module fifo_mem
+# 
+# Top level modules:
+# 	fifo_mem
+# End time: 20:56:10 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:10 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source read_ptr.sv 
+# -- Compiling module read_ptr
+###### read_ptr.sv(15): 	assign empty = (rq2_wptr == g_inc_rptr);
+# 
+# ** Warning: read_ptr.sv(15): (vlog-2623) Undefined variable: empty.
+# 
+# Top level modules:
+# 	read_ptr
+# End time: 20:56:10 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:10 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source write_ptr.sv 
+# -- Compiling module write_ptr
+# 
+# Top level modules:
+# 	write_ptr
+# End time: 20:56:10 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:10 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source synchronizer.sv 
+# -- Compiling module synchronizer
+# 
+# Top level modules:
+# 	synchronizer
+# End time: 20:56:11 on Apr 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:56:11 on Apr 24,2024
+# vlog -reportprogress 300 -lint -source fifo1_tb.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 20:56:11 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.top 
+# Start time: 20:56:11 on Apr 24,2024
+# Loading sv_std.std
+# Loading work.top
+# Loading work.asynchronous_fifo
+# Loading work.synchronizer
+# Loading work.write_ptr
+# Loading work.read_ptr
+# Loading work.fifo_mem
+# ** Error: invalid command name "run -all"
+# Error in macro ./run.do line 14
+# invalid command name "run -all"
+#     while executing
+# "run -all"
+add wave -position insertpoint  \
+sim:/top/DATA_WIDTH \
+sim:/top/data_read \
+sim:/top/wfull \
+sim:/top/rempty \
+sim:/top/half_wfull \
+sim:/top/half_rempty \
+sim:/top/data_write \
+sim:/top/w_en \
+sim:/top/wclk \
+sim:/top/wrst_n \
+sim:/top/r_en \
+sim:/top/rclk \
+sim:/top/rrst_n \
+sim:/top/data_write_q \
+sim:/top/wdata
+# (vsim-4027) Logging is not supported for Queue item: /top/data_write_q 
+run
+# ** Warning: (vsim-8233) fifomem.sv(13): Index xxxxxxxxx into array dimension [0:511] is out of bounds.
+#    Time: 0 ps  Iteration: 0  Instance: /top/as_fifo/fifom
+# Time = 470000: TestBench Passed: expected value :wr_data = 72 and got value : rd_data = 72,half_wfull = 0,half_rempty = 1
+# Time = 510000: TestBench Passed: expected value :wr_data = b2 and got value : rd_data = b2,half_wfull = 0,half_rempty = 1
+# Time = 550000: TestBench Passed: expected value :wr_data = 10 and got value : rd_data = 10,half_wfull = 0,half_rempty = 1
+# Time = 590000: TestBench Passed: expected value :wr_data = 30 and got value : rd_data = 30,half_wfull = 0,half_rempty = 1
+# Time = 630000: TestBench Passed: expected value :wr_data = b5 and got value : rd_data = b5,half_wfull = 0,half_rempty = 1
+# Time = 670000: TestBench Passed: expected value :wr_data = b6 and got value : rd_data = b6,half_wfull = 0,half_rempty = 1
+# Time = 710000: TestBench Passed: expected value :wr_data = 14 and got value : rd_data = 14,half_wfull = 0,half_rempty = 1
+# Time = 750000: TestBench Passed: expected value :wr_data = df and got value : rd_data = df,half_wfull = 0,half_rempty = 1
+# Time = 790000: TestBench Passed: expected value :wr_data = bb and got value : rd_data = bb,half_wfull = 0,half_rempty = 1
+# Time = 830000: TestBench Passed: expected value :wr_data = eb and got value : rd_data = eb,half_wfull = 0,half_rempty = 1
+# Time = 870000: TestBench Passed: expected value :wr_data = 41 and got value : rd_data = 41,half_wfull = 0,half_rempty = 1
+# Time = 910000: TestBench Passed: expected value :wr_data = 40 and got value : rd_data = 40,half_wfull = 0,half_rempty = 1
+# Time = 950000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 0,half_rempty = 1
+# Time = 990000: TestBench Passed: expected value :wr_data = 03 and got value : rd_data = 03,half_wfull = 0,half_rempty = 1
+# Time = 1030000: TestBench Passed: expected value :wr_data = fc and got value : rd_data = fc,half_wfull = 0,half_rempty = 1
+# Time = 1070000: TestBench Passed: expected value :wr_data = 5d and got value : rd_data = 5d,half_wfull = 0,half_rempty = 1
+# Time = 1110000: TestBench Passed: expected value :wr_data = 1d and got value : rd_data = 1d,half_wfull = 0,half_rempty = 1
+# Time = 1150000: TestBench Passed: expected value :wr_data = 6a and got value : rd_data = 6a,half_wfull = 0,half_rempty = 1
+# Time = 1190000: TestBench Passed: expected value :wr_data = 16 and got value : rd_data = 16,half_wfull = 0,half_rempty = 1
+# Time = 1230000: TestBench Passed: expected value :wr_data = 3f and got value : rd_data = 3f,half_wfull = 0,half_rempty = 1
+# Time = 1270000: TestBench Passed: expected value :wr_data = 23 and got value : rd_data = 23,half_wfull = 0,half_rempty = 1
+# Time = 1310000: TestBench Passed: expected value :wr_data = a8 and got value : rd_data = a8,half_wfull = 0,half_rempty = 1
+# Time = 1350000: TestBench Passed: expected value :wr_data = 90 and got value : rd_data = 90,half_wfull = 0,half_rempty = 1
+# Time = 1390000: TestBench Passed: expected value :wr_data = 25 and got value : rd_data = 25,half_wfull = 0,half_rempty = 1
+# Time = 1430000: TestBench Passed: expected value :wr_data = 82 and got value : rd_data = 82,half_wfull = 0,half_rempty = 1
+# Time = 1470000: TestBench Passed: expected value :wr_data = 5b and got value : rd_data = 5b,half_wfull = 0,half_rempty = 1
+# Time = 1510000: TestBench Passed: expected value :wr_data = f2 and got value : rd_data = f2,half_wfull = 0,half_rempty = 1
+# Time = 1550000: TestBench Passed: expected value :wr_data = 31 and got value : rd_data = 31,half_wfull = 0,half_rempty = 1
+# Time = 1590000: TestBench Passed: expected value :wr_data = cd and got value : rd_data = cd,half_wfull = 0,half_rempty = 1
+# Time = 1630000: TestBench Passed: expected value :wr_data = 64 and got value : rd_data = 64,half_wfull = 0,half_rempty = 1
+# Time = 1670000: TestBench Passed: expected value :wr_data = 2b and got value : rd_data = 2b,half_wfull = 0,half_rempty = 1
+# Time = 1710000: TestBench Passed: expected value :wr_data = ea and got value : rd_data = ea,half_wfull = 0,half_rempty = 1
+# Time = 1750000: TestBench Passed: expected value :wr_data = 91 and got value : rd_data = 91,half_wfull = 0,half_rempty = 1
+# Time = 1790000: TestBench Passed: expected value :wr_data = f6 and got value : rd_data = f6,half_wfull = 0,half_rempty = 1
+# Time = 1830000: TestBench Passed: expected value :wr_data = 96 and got value : rd_data = 96,half_wfull = 0,half_rempty = 1
+# Time = 1870000: TestBench Passed: expected value :wr_data = 55 and got value : rd_data = 55,half_wfull = 0,half_rempty = 1
+# Time = 1910000: TestBench Passed: expected value :wr_data = 76 and got value : rd_data = 76,half_wfull = 0,half_rempty = 1
+# Time = 1950000: TestBench Passed: expected value :wr_data = b8 and got value : rd_data = b8,half_wfull = 0,half_rempty = 1
+# Time = 1990000: TestBench Passed: expected value :wr_data = 14 and got value : rd_data = 14,half_wfull = 0,half_rempty = 1
+# Time = 2030000: TestBench Passed: expected value :wr_data = 81 and got value : rd_data = 81,half_wfull = 0,half_rempty = 1
+# Time = 2070000: TestBench Passed: expected value :wr_data = 77 and got value : rd_data = 77,half_wfull = 0,half_rempty = 1
+# Time = 2110000: TestBench Passed: expected value :wr_data = ed and got value : rd_data = ed,half_wfull = 0,half_rempty = 1
+# Time = 2150000: TestBench Passed: expected value :wr_data = 82 and got value : rd_data = 82,half_wfull = 0,half_rempty = 1
+# Time = 2190000: TestBench Passed: expected value :wr_data = d9 and got value : rd_data = d9,half_wfull = 0,half_rempty = 1
+# Time = 2230000: TestBench Passed: expected value :wr_data = 14 and got value : rd_data = 14,half_wfull = 0,half_rempty = 1
+# Time = 2270000: TestBench Passed: expected value :wr_data = 7d and got value : rd_data = 7d,half_wfull = 0,half_rempty = 1
+# Time = 2310000: TestBench Passed: expected value :wr_data = 8c and got value : rd_data = 8c,half_wfull = 0,half_rempty = 1
+# Time = 2350000: TestBench Passed: expected value :wr_data = 4b and got value : rd_data = 4b,half_wfull = 0,half_rempty = 1
+# Time = 2390000: TestBench Passed: expected value :wr_data = 7c and got value : rd_data = 7c,half_wfull = 0,half_rempty = 1
+# Time = 2430000: TestBench Passed: expected value :wr_data = 70 and got value : rd_data = 70,half_wfull = 0,half_rempty = 1
+# Time = 2470000: TestBench Passed: expected value :wr_data = a0 and got value : rd_data = a0,half_wfull = 0,half_rempty = 1
+# Time = 2510000: TestBench Passed: expected value :wr_data = 4c and got value : rd_data = 4c,half_wfull = 0,half_rempty = 1
+# Time = 2550000: TestBench Passed: expected value :wr_data = 61 and got value : rd_data = 61,half_wfull = 0,half_rempty = 1
+# Time = 2590000: TestBench Passed: expected value :wr_data = 9d and got value : rd_data = 9d,half_wfull = 0,half_rempty = 1
+# Time = 2630000: TestBench Passed: expected value :wr_data = 1d and got value : rd_data = 1d,half_wfull = 0,half_rempty = 1
+# Time = 2670000: TestBench Passed: expected value :wr_data = 16 and got value : rd_data = 16,half_wfull = 0,half_rempty = 1
+# Time = 2710000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 0,half_rempty = 1
+# Time = 2750000: TestBench Passed: expected value :wr_data = 72 and got value : rd_data = 72,half_wfull = 0,half_rempty = 1
+# Time = 2790000: TestBench Passed: expected value :wr_data = 93 and got value : rd_data = 93,half_wfull = 0,half_rempty = 1
+# Time = 2830000: TestBench Passed: expected value :wr_data = 45 and got value : rd_data = 45,half_wfull = 0,half_rempty = 1
+# Time = 2870000: TestBench Passed: expected value :wr_data = 4e and got value : rd_data = 4e,half_wfull = 0,half_rempty = 1
+# Time = 2910000: TestBench Passed: expected value :wr_data = 35 and got value : rd_data = 35,half_wfull = 0,half_rempty = 1
+# Time = 2950000: TestBench Passed: expected value :wr_data = e6 and got value : rd_data = e6,half_wfull = 0,half_rempty = 1
+# Time = 2990000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 0,half_rempty = 1
+# Time = 3030000: TestBench Passed: expected value :wr_data = d7 and got value : rd_data = d7,half_wfull = 0,half_rempty = 1
+# Time = 3070000: TestBench Passed: expected value :wr_data = 67 and got value : rd_data = 67,half_wfull = 0,half_rempty = 1
+# Time = 3110000: TestBench Passed: expected value :wr_data = 63 and got value : rd_data = 63,half_wfull = 0,half_rempty = 1
+# Time = 3150000: TestBench Passed: expected value :wr_data = 05 and got value : rd_data = 05,half_wfull = 0,half_rempty = 1
+# Time = 3190000: TestBench Passed: expected value :wr_data = a8 and got value : rd_data = a8,half_wfull = 0,half_rempty = 1
+# Time = 3230000: TestBench Passed: expected value :wr_data = c1 and got value : rd_data = c1,half_wfull = 0,half_rempty = 1
+# Time = 3270000: TestBench Passed: expected value :wr_data = bf and got value : rd_data = bf,half_wfull = 0,half_rempty = 1
+# Time = 3310000: TestBench Passed: expected value :wr_data = 88 and got value : rd_data = 88,half_wfull = 0,half_rempty = 1
+# Time = 3350000: TestBench Passed: expected value :wr_data = ac and got value : rd_data = ac,half_wfull = 0,half_rempty = 1
+# Time = 3390000: TestBench Passed: expected value :wr_data = cc and got value : rd_data = cc,half_wfull = 0,half_rempty = 1
+# Time = 3430000: TestBench Passed: expected value :wr_data = 4c and got value : rd_data = 4c,half_wfull = 0,half_rempty = 1
+# Time = 3470000: TestBench Passed: expected value :wr_data = 0c and got value : rd_data = 0c,half_wfull = 0,half_rempty = 1
+# Time = 3510000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 0,half_rempty = 1
+# Time = 3550000: TestBench Passed: expected value :wr_data = 73 and got value : rd_data = 73,half_wfull = 0,half_rempty = 1
+# Time = 3590000: TestBench Passed: expected value :wr_data = fa and got value : rd_data = fa,half_wfull = 0,half_rempty = 1
+# Time = 3630000: TestBench Passed: expected value :wr_data = 1c and got value : rd_data = 1c,half_wfull = 0,half_rempty = 1
+# Time = 3670000: TestBench Passed: expected value :wr_data = 93 and got value : rd_data = 93,half_wfull = 0,half_rempty = 1
+# Time = 3710000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 0,half_rempty = 1
+# Time = 3750000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 0,half_rempty = 1
+# Time = 3790000: TestBench Passed: expected value :wr_data = f5 and got value : rd_data = f5,half_wfull = 0,half_rempty = 1
+# Time = 3830000: TestBench Passed: expected value :wr_data = 74 and got value : rd_data = 74,half_wfull = 0,half_rempty = 1
+# Time = 3870000: TestBench Passed: expected value :wr_data = 40 and got value : rd_data = 40,half_wfull = 0,half_rempty = 1
+# Time = 3910000: TestBench Passed: expected value :wr_data = a9 and got value : rd_data = a9,half_wfull = 0,half_rempty = 1
+# Time = 3950000: TestBench Passed: expected value :wr_data = 2e and got value : rd_data = 2e,half_wfull = 0,half_rempty = 1
+# Time = 3990000: TestBench Passed: expected value :wr_data = ba and got value : rd_data = ba,half_wfull = 0,half_rempty = 1
+# Time = 4030000: TestBench Passed: expected value :wr_data = d9 and got value : rd_data = d9,half_wfull = 0,half_rempty = 1
+# Time = 4070000: TestBench Passed: expected value :wr_data = bb and got value : rd_data = bb,half_wfull = 0,half_rempty = 1
+# Time = 4110000: TestBench Passed: expected value :wr_data = 5e and got value : rd_data = 5e,half_wfull = 0,half_rempty = 1
+# Time = 4150000: TestBench Passed: expected value :wr_data = 25 and got value : rd_data = 25,half_wfull = 0,half_rempty = 1
+# Time = 4190000: TestBench Passed: expected value :wr_data = 04 and got value : rd_data = 04,half_wfull = 0,half_rempty = 1
+# Time = 4230000: TestBench Passed: expected value :wr_data = 2f and got value : rd_data = 2f,half_wfull = 0,half_rempty = 1
+# Time = 4270000: TestBench Passed: expected value :wr_data = 94 and got value : rd_data = 94,half_wfull = 0,half_rempty = 1
+# Time = 4310000: TestBench Passed: expected value :wr_data = 66 and got value : rd_data = 66,half_wfull = 1,half_rempty = 1
+# Time = 4350000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 1
+# Time = 4390000: TestBench Passed: expected value :wr_data = 37 and got value : rd_data = 37,half_wfull = 1,half_rempty = 1
+# Time = 4430000: TestBench Passed: expected value :wr_data = b5 and got value : rd_data = b5,half_wfull = 1,half_rempty = 1
+# Time = 4470000: TestBench Passed: expected value :wr_data = 70 and got value : rd_data = 70,half_wfull = 1,half_rempty = 1
+# Time = 4510000: TestBench Passed: expected value :wr_data = ad and got value : rd_data = ad,half_wfull = 1,half_rempty = 1
+# Time = 4550000: TestBench Passed: expected value :wr_data = 02 and got value : rd_data = 02,half_wfull = 1,half_rempty = 1
+# Time = 4590000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 1,half_rempty = 1
+# Time = 4630000: TestBench Passed: expected value :wr_data = 98 and got value : rd_data = 98,half_wfull = 1,half_rempty = 1
+# Time = 4670000: TestBench Passed: expected value :wr_data = 81 and got value : rd_data = 81,half_wfull = 1,half_rempty = 1
+# Time = 4710000: TestBench Passed: expected value :wr_data = 5a and got value : rd_data = 5a,half_wfull = 1,half_rempty = 1
+# Time = 4750000: TestBench Passed: expected value :wr_data = 51 and got value : rd_data = 51,half_wfull = 1,half_rempty = 1
+# Time = 4790000: TestBench Passed: expected value :wr_data = a2 and got value : rd_data = a2,half_wfull = 1,half_rempty = 1
+# Time = 4830000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 1,half_rempty = 1
+# Time = 4870000: TestBench Passed: expected value :wr_data = 70 and got value : rd_data = 70,half_wfull = 1,half_rempty = 1
+# Time = 4910000: TestBench Passed: expected value :wr_data = ae and got value : rd_data = ae,half_wfull = 1,half_rempty = 1
+# Time = 4950000: TestBench Passed: expected value :wr_data = d8 and got value : rd_data = d8,half_wfull = 1,half_rempty = 1
+# Time = 4990000: TestBench Passed: expected value :wr_data = 5d and got value : rd_data = 5d,half_wfull = 1,half_rempty = 1
+# Time = 5030000: TestBench Passed: expected value :wr_data = 75 and got value : rd_data = 75,half_wfull = 1,half_rempty = 1
+# Time = 5070000: TestBench Passed: expected value :wr_data = 5e and got value : rd_data = 5e,half_wfull = 1,half_rempty = 1
+# Time = 5110000: TestBench Passed: expected value :wr_data = 3e and got value : rd_data = 3e,half_wfull = 1,half_rempty = 1
+# Time = 5150000: TestBench Passed: expected value :wr_data = 14 and got value : rd_data = 14,half_wfull = 1,half_rempty = 1
+# Time = 5190000: TestBench Passed: expected value :wr_data = ea and got value : rd_data = ea,half_wfull = 1,half_rempty = 1
+# Time = 5230000: TestBench Passed: expected value :wr_data = d3 and got value : rd_data = d3,half_wfull = 1,half_rempty = 1
+# Time = 5270000: TestBench Passed: expected value :wr_data = a8 and got value : rd_data = a8,half_wfull = 1,half_rempty = 1
+# Time = 5310000: TestBench Passed: expected value :wr_data = 01 and got value : rd_data = 01,half_wfull = 1,half_rempty = 1
+# Time = 5350000: TestBench Passed: expected value :wr_data = 3e and got value : rd_data = 3e,half_wfull = 1,half_rempty = 1
+# Time = 5390000: TestBench Passed: expected value :wr_data = 32 and got value : rd_data = 32,half_wfull = 1,half_rempty = 1
+# Time = 5430000: TestBench Passed: expected value :wr_data = 22 and got value : rd_data = 22,half_wfull = 1,half_rempty = 1
+# Time = 5470000: TestBench Passed: expected value :wr_data = 40 and got value : rd_data = 40,half_wfull = 1,half_rempty = 1
+# Time = 5510000: TestBench Passed: expected value :wr_data = 69 and got value : rd_data = 69,half_wfull = 1,half_rempty = 1
+# Time = 5550000: TestBench Passed: expected value :wr_data = e7 and got value : rd_data = e7,half_wfull = 1,half_rempty = 1
+# Time = 5590000: TestBench Passed: expected value :wr_data = ad and got value : rd_data = ad,half_wfull = 1,half_rempty = 1
+# Time = 5630000: TestBench Passed: expected value :wr_data = 0f and got value : rd_data = 0f,half_wfull = 1,half_rempty = 1
+# Time = 5670000: TestBench Passed: expected value :wr_data = 81 and got value : rd_data = 81,half_wfull = 1,half_rempty = 1
+# Time = 5710000: TestBench Passed: expected value :wr_data = b8 and got value : rd_data = b8,half_wfull = 1,half_rempty = 1
+# Time = 5750000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 1,half_rempty = 1
+# Time = 5790000: TestBench Passed: expected value :wr_data = 39 and got value : rd_data = 39,half_wfull = 1,half_rempty = 1
+# Time = 5830000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 1
+# Time = 5870000: TestBench Passed: expected value :wr_data = a2 and got value : rd_data = a2,half_wfull = 1,half_rempty = 1
+# Time = 5910000: TestBench Passed: expected value :wr_data = 3c and got value : rd_data = 3c,half_wfull = 1,half_rempty = 1
+# Time = 5950000: TestBench Passed: expected value :wr_data = 22 and got value : rd_data = 22,half_wfull = 1,half_rempty = 1
+# Time = 5990000: TestBench Passed: expected value :wr_data = fc and got value : rd_data = fc,half_wfull = 1,half_rempty = 1
+# Time = 6030000: TestBench Passed: expected value :wr_data = a1 and got value : rd_data = a1,half_wfull = 1,half_rempty = 1
+# Time = 6070000: TestBench Passed: expected value :wr_data = 36 and got value : rd_data = 36,half_wfull = 1,half_rempty = 1
+# Time = 6110000: TestBench Passed: expected value :wr_data = 8c and got value : rd_data = 8c,half_wfull = 1,half_rempty = 1
+# Time = 6150000: TestBench Passed: expected value :wr_data = 9c and got value : rd_data = 9c,half_wfull = 1,half_rempty = 1
+# Time = 6190000: TestBench Passed: expected value :wr_data = fa and got value : rd_data = fa,half_wfull = 1,half_rempty = 1
+# Time = 6230000: TestBench Passed: expected value :wr_data = 96 and got value : rd_data = 96,half_wfull = 1,half_rempty = 1
+# Time = 6270000: TestBench Passed: expected value :wr_data = 34 and got value : rd_data = 34,half_wfull = 1,half_rempty = 1
+# Time = 6310000: TestBench Passed: expected value :wr_data = b5 and got value : rd_data = b5,half_wfull = 1,half_rempty = 1
+# Time = 6350000: TestBench Passed: expected value :wr_data = 73 and got value : rd_data = 73,half_wfull = 1,half_rempty = 1
+# Time = 6390000: TestBench Passed: expected value :wr_data = 56 and got value : rd_data = 56,half_wfull = 1,half_rempty = 1
+# Time = 6430000: TestBench Passed: expected value :wr_data = 74 and got value : rd_data = 74,half_wfull = 1,half_rempty = 1
+# Time = 6470000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 1
+# Time = 6510000: TestBench Passed: expected value :wr_data = 39 and got value : rd_data = 39,half_wfull = 1,half_rempty = 1
+# Time = 6550000: TestBench Passed: expected value :wr_data = 5f and got value : rd_data = 5f,half_wfull = 1,half_rempty = 1
+# Time = 6590000: TestBench Passed: expected value :wr_data = c9 and got value : rd_data = c9,half_wfull = 1,half_rempty = 1
+# Time = 6630000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 1,half_rempty = 1
+# Time = 6670000: TestBench Passed: expected value :wr_data = 47 and got value : rd_data = 47,half_wfull = 1,half_rempty = 1
+# Time = 6710000: TestBench Passed: expected value :wr_data = 8f and got value : rd_data = 8f,half_wfull = 1,half_rempty = 1
+# Time = 6750000: TestBench Passed: expected value :wr_data = 67 and got value : rd_data = 67,half_wfull = 1,half_rempty = 1
+# Time = 6790000: TestBench Passed: expected value :wr_data = 40 and got value : rd_data = 40,half_wfull = 1,half_rempty = 1
+# Time = 6830000: TestBench Passed: expected value :wr_data = 3e and got value : rd_data = 3e,half_wfull = 1,half_rempty = 1
+# Time = 6870000: TestBench Passed: expected value :wr_data = ca and got value : rd_data = ca,half_wfull = 1,half_rempty = 1
+# Time = 6910000: TestBench Passed: expected value :wr_data = 54 and got value : rd_data = 54,half_wfull = 1,half_rempty = 1
+# Time = 6950000: TestBench Passed: expected value :wr_data = 83 and got value : rd_data = 83,half_wfull = 1,half_rempty = 1
+# Time = 6990000: TestBench Passed: expected value :wr_data = 91 and got value : rd_data = 91,half_wfull = 1,half_rempty = 1
+# Time = 7030000: TestBench Passed: expected value :wr_data = b5 and got value : rd_data = b5,half_wfull = 1,half_rempty = 1
+# Time = 7070000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 1,half_rempty = 1
+# Time = 7110000: TestBench Passed: expected value :wr_data = 5d and got value : rd_data = 5d,half_wfull = 1,half_rempty = 1
+# Time = 7150000: TestBench Passed: expected value :wr_data = 87 and got value : rd_data = 87,half_wfull = 1,half_rempty = 1
+# Time = 7190000: TestBench Passed: expected value :wr_data = e1 and got value : rd_data = e1,half_wfull = 1,half_rempty = 1
+# Time = 7230000: TestBench Passed: expected value :wr_data = d8 and got value : rd_data = d8,half_wfull = 1,half_rempty = 1
+# Time = 7270000: TestBench Passed: expected value :wr_data = 07 and got value : rd_data = 07,half_wfull = 1,half_rempty = 1
+# Time = 7310000: TestBench Passed: expected value :wr_data = 7a and got value : rd_data = 7a,half_wfull = 1,half_rempty = 1
+# Time = 7350000: TestBench Passed: expected value :wr_data = ff and got value : rd_data = ff,half_wfull = 1,half_rempty = 1
+# Time = 7390000: TestBench Passed: expected value :wr_data = 4d and got value : rd_data = 4d,half_wfull = 1,half_rempty = 1
+# Time = 7430000: TestBench Passed: expected value :wr_data = d8 and got value : rd_data = d8,half_wfull = 1,half_rempty = 1
+# Time = 7470000: TestBench Passed: expected value :wr_data = 16 and got value : rd_data = 16,half_wfull = 1,half_rempty = 1
+# Time = 7510000: TestBench Passed: expected value :wr_data = b7 and got value : rd_data = b7,half_wfull = 1,half_rempty = 1
+# Time = 7550000: TestBench Passed: expected value :wr_data = de and got value : rd_data = de,half_wfull = 1,half_rempty = 1
+# Time = 7590000: TestBench Passed: expected value :wr_data = 3e and got value : rd_data = 3e,half_wfull = 1,half_rempty = 1
+# Time = 7630000: TestBench Passed: expected value :wr_data = 59 and got value : rd_data = 59,half_wfull = 1,half_rempty = 1
+# Time = 7670000: TestBench Passed: expected value :wr_data = 05 and got value : rd_data = 05,half_wfull = 1,half_rempty = 1
+# Time = 7710000: TestBench Passed: expected value :wr_data = 1a and got value : rd_data = 1a,half_wfull = 1,half_rempty = 1
+# Time = 7750000: TestBench Passed: expected value :wr_data = 17 and got value : rd_data = 17,half_wfull = 1,half_rempty = 1
+# Time = 7790000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 1,half_rempty = 1
+# Time = 7830000: TestBench Passed: expected value :wr_data = 68 and got value : rd_data = 68,half_wfull = 1,half_rempty = 1
+# Time = 7870000: TestBench Passed: expected value :wr_data = cb and got value : rd_data = cb,half_wfull = 1,half_rempty = 1
+# Time = 7910000: TestBench Passed: expected value :wr_data = 3c and got value : rd_data = 3c,half_wfull = 1,half_rempty = 1
+# Time = 7950000: TestBench Passed: expected value :wr_data = 2e and got value : rd_data = 2e,half_wfull = 1,half_rempty = 1
+# Time = 7990000: TestBench Passed: expected value :wr_data = eb and got value : rd_data = eb,half_wfull = 1,half_rempty = 1
+# Time = 8030000: TestBench Passed: expected value :wr_data = c7 and got value : rd_data = c7,half_wfull = 1,half_rempty = 1
+# Time = 8070000: TestBench Passed: expected value :wr_data = 12 and got value : rd_data = 12,half_wfull = 1,half_rempty = 1
+# Time = 8110000: TestBench Passed: expected value :wr_data = 55 and got value : rd_data = 55,half_wfull = 1,half_rempty = 1
+# Time = 8150000: TestBench Passed: expected value :wr_data = 0f and got value : rd_data = 0f,half_wfull = 1,half_rempty = 1
+# Time = 8190000: TestBench Passed: expected value :wr_data = 22 and got value : rd_data = 22,half_wfull = 1,half_rempty = 1
+# Time = 8230000: TestBench Passed: expected value :wr_data = f5 and got value : rd_data = f5,half_wfull = 1,half_rempty = 1
+# Time = 8270000: TestBench Passed: expected value :wr_data = e8 and got value : rd_data = e8,half_wfull = 1,half_rempty = 1
+# Time = 8310000: TestBench Passed: expected value :wr_data = 8c and got value : rd_data = 8c,half_wfull = 1,half_rempty = 1
+# Time = 8350000: TestBench Passed: expected value :wr_data = 52 and got value : rd_data = 52,half_wfull = 1,half_rempty = 1
+# Time = 8390000: TestBench Passed: expected value :wr_data = 88 and got value : rd_data = 88,half_wfull = 1,half_rempty = 1
+# Time = 8430000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 1,half_rempty = 1
+# Time = 8470000: TestBench Passed: expected value :wr_data = 63 and got value : rd_data = 63,half_wfull = 1,half_rempty = 1
+# Time = 8510000: TestBench Passed: expected value :wr_data = 19 and got value : rd_data = 19,half_wfull = 1,half_rempty = 1
+# Time = 8550000: TestBench Passed: expected value :wr_data = ab and got value : rd_data = ab,half_wfull = 1,half_rempty = 1
+# Time = 8590000: TestBench Passed: expected value :wr_data = d1 and got value : rd_data = d1,half_wfull = 1,half_rempty = 1
+# Time = 8630000: TestBench Passed: expected value :wr_data = c3 and got value : rd_data = c3,half_wfull = 1,half_rempty = 1
+# Time = 8670000: TestBench Passed: expected value :wr_data = dc and got value : rd_data = dc,half_wfull = 1,half_rempty = 1
+# Time = 8710000: TestBench Passed: expected value :wr_data = f5 and got value : rd_data = f5,half_wfull = 1,half_rempty = 1
+# Time = 8750000: TestBench Passed: expected value :wr_data = c0 and got value : rd_data = c0,half_wfull = 1,half_rempty = 1
+# Time = 8790000: TestBench Passed: expected value :wr_data = 50 and got value : rd_data = 50,half_wfull = 1,half_rempty = 1
+# Time = 8830000: TestBench Passed: expected value :wr_data = 03 and got value : rd_data = 03,half_wfull = 1,half_rempty = 1
+# Time = 8870000: TestBench Passed: expected value :wr_data = 06 and got value : rd_data = 06,half_wfull = 1,half_rempty = 1
+# Time = 8910000: TestBench Passed: expected value :wr_data = 18 and got value : rd_data = 18,half_wfull = 1,half_rempty = 1
+# Time = 8950000: TestBench Passed: expected value :wr_data = 47 and got value : rd_data = 47,half_wfull = 1,half_rempty = 1
+# Time = 8990000: TestBench Passed: expected value :wr_data = 5b and got value : rd_data = 5b,half_wfull = 1,half_rempty = 1
+# Time = 9030000: TestBench Passed: expected value :wr_data = 1f and got value : rd_data = 1f,half_wfull = 1,half_rempty = 1
+# Time = 9070000: TestBench Passed: expected value :wr_data = 64 and got value : rd_data = 64,half_wfull = 1,half_rempty = 1
+# Time = 9110000: TestBench Passed: expected value :wr_data = 6c and got value : rd_data = 6c,half_wfull = 1,half_rempty = 1
+# Time = 9150000: TestBench Passed: expected value :wr_data = ca and got value : rd_data = ca,half_wfull = 1,half_rempty = 1
+# Time = 9190000: TestBench Passed: expected value :wr_data = 68 and got value : rd_data = 68,half_wfull = 1,half_rempty = 1
+# Time = 9230000: TestBench Passed: expected value :wr_data = 38 and got value : rd_data = 38,half_wfull = 1,half_rempty = 1
+# Time = 9270000: TestBench Passed: expected value :wr_data = ad and got value : rd_data = ad,half_wfull = 1,half_rempty = 1
+# Time = 9310000: TestBench Passed: expected value :wr_data = af and got value : rd_data = af,half_wfull = 1,half_rempty = 1
+# Time = 9350000: TestBench Passed: expected value :wr_data = 3c and got value : rd_data = 3c,half_wfull = 1,half_rempty = 1
+# Time = 9390000: TestBench Passed: expected value :wr_data = a9 and got value : rd_data = a9,half_wfull = 1,half_rempty = 1
+# Time = 9430000: TestBench Passed: expected value :wr_data = 21 and got value : rd_data = 21,half_wfull = 1,half_rempty = 1
+# Time = 9470000: TestBench Passed: expected value :wr_data = 64 and got value : rd_data = 64,half_wfull = 1,half_rempty = 1
+# Time = 9510000: TestBench Passed: expected value :wr_data = 7b and got value : rd_data = 7b,half_wfull = 1,half_rempty = 1
+# Time = 9550000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 1,half_rempty = 1
+# Time = 9590000: TestBench Passed: expected value :wr_data = 23 and got value : rd_data = 23,half_wfull = 1,half_rempty = 1
+# Time = 9630000: TestBench Passed: expected value :wr_data = 30 and got value : rd_data = 30,half_wfull = 1,half_rempty = 1
+# Time = 9670000: TestBench Passed: expected value :wr_data = f7 and got value : rd_data = f7,half_wfull = 1,half_rempty = 1
+# Time = 9710000: TestBench Passed: expected value :wr_data = 3d and got value : rd_data = 3d,half_wfull = 1,half_rempty = 1
+# Time = 9750000: TestBench Passed: expected value :wr_data = f4 and got value : rd_data = f4,half_wfull = 1,half_rempty = 1
+# Time = 9790000: TestBench Passed: expected value :wr_data = 5f and got value : rd_data = 5f,half_wfull = 1,half_rempty = 1
+# Time = 9830000: TestBench Passed: expected value :wr_data = fd and got value : rd_data = fd,half_wfull = 1,half_rempty = 1
+# Time = 9870000: TestBench Passed: expected value :wr_data = 8e and got value : rd_data = 8e,half_wfull = 1,half_rempty = 1
+# Time = 9910000: TestBench Passed: expected value :wr_data = 6e and got value : rd_data = 6e,half_wfull = 1,half_rempty = 1
+# Time = 9950000: TestBench Passed: expected value :wr_data = 37 and got value : rd_data = 37,half_wfull = 1,half_rempty = 1
+# Time = 9990000: TestBench Passed: expected value :wr_data = 85 and got value : rd_data = 85,half_wfull = 1,half_rempty = 1
+# Time = 10030000: TestBench Passed: expected value :wr_data = 55 and got value : rd_data = 55,half_wfull = 1,half_rempty = 1
+# Time = 10070000: TestBench Passed: expected value :wr_data = ca and got value : rd_data = ca,half_wfull = 1,half_rempty = 1
+# Time = 10110000: TestBench Passed: expected value :wr_data = e8 and got value : rd_data = e8,half_wfull = 1,half_rempty = 1
+# Time = 10150000: TestBench Passed: expected value :wr_data = 59 and got value : rd_data = 59,half_wfull = 1,half_rempty = 1
+# Time = 10190000: TestBench Passed: expected value :wr_data = f3 and got value : rd_data = f3,half_wfull = 1,half_rempty = 1
+# Time = 10230000: TestBench Passed: expected value :wr_data = 6c and got value : rd_data = 6c,half_wfull = 1,half_rempty = 1
+# Time = 10270000: TestBench Passed: expected value :wr_data = 1f and got value : rd_data = 1f,half_wfull = 1,half_rempty = 1
+# Time = 10310000: TestBench Passed: expected value :wr_data = 80 and got value : rd_data = 80,half_wfull = 1,half_rempty = 1
+# Time = 10350000: TestBench Passed: expected value :wr_data = d5 and got value : rd_data = d5,half_wfull = 1,half_rempty = 1
+# Time = 10390000: TestBench Passed: expected value :wr_data = a9 and got value : rd_data = a9,half_wfull = 1,half_rempty = 1
+# Time = 10430000: TestBench Passed: expected value :wr_data = 80 and got value : rd_data = 80,half_wfull = 1,half_rempty = 1
+# Time = 10470000: TestBench Passed: expected value :wr_data = 1c and got value : rd_data = 1c,half_wfull = 1,half_rempty = 1
+# Time = 10510000: TestBench Passed: expected value :wr_data = fe and got value : rd_data = fe,half_wfull = 1,half_rempty = 1
+# Time = 10550000: TestBench Passed: expected value :wr_data = 0b and got value : rd_data = 0b,half_wfull = 1,half_rempty = 1
+# Time = 10590000: TestBench Passed: expected value :wr_data = cb and got value : rd_data = cb,half_wfull = 1,half_rempty = 1
+# Time = 10630000: TestBench Passed: expected value :wr_data = 13 and got value : rd_data = 13,half_wfull = 1,half_rempty = 1
+# Time = 10670000: TestBench Passed: expected value :wr_data = 56 and got value : rd_data = 56,half_wfull = 1,half_rempty = 1
+# Time = 10710000: TestBench Passed: expected value :wr_data = f1 and got value : rd_data = f1,half_wfull = 1,half_rempty = 1
+# Time = 10750000: TestBench Passed: expected value :wr_data = c2 and got value : rd_data = c2,half_wfull = 1,half_rempty = 0
+# Time = 10790000: TestBench Passed: expected value :wr_data = 6d and got value : rd_data = 6d,half_wfull = 1,half_rempty = 0
+# Time = 10830000: TestBench Passed: expected value :wr_data = 6a and got value : rd_data = 6a,half_wfull = 1,half_rempty = 0
+# Time = 10870000: TestBench Passed: expected value :wr_data = 03 and got value : rd_data = 03,half_wfull = 1,half_rempty = 0
+# Time = 10910000: TestBench Passed: expected value :wr_data = 16 and got value : rd_data = 16,half_wfull = 1,half_rempty = 0
+# Time = 10950000: TestBench Passed: expected value :wr_data = 57 and got value : rd_data = 57,half_wfull = 1,half_rempty = 0
+# Time = 10990000: TestBench Passed: expected value :wr_data = 10 and got value : rd_data = 10,half_wfull = 1,half_rempty = 0
+# Time = 11030000: TestBench Passed: expected value :wr_data = 33 and got value : rd_data = 33,half_wfull = 1,half_rempty = 0
+# Time = 11070000: TestBench Passed: expected value :wr_data = 80 and got value : rd_data = 80,half_wfull = 1,half_rempty = 0
+# Time = 11110000: TestBench Passed: expected value :wr_data = 6f and got value : rd_data = 6f,half_wfull = 1,half_rempty = 0
+# Time = 11150000: TestBench Passed: expected value :wr_data = 81 and got value : rd_data = 81,half_wfull = 1,half_rempty = 0
+# Time = 11190000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 1,half_rempty = 0
+# Time = 11230000: TestBench Passed: expected value :wr_data = 24 and got value : rd_data = 24,half_wfull = 1,half_rempty = 0
+# Time = 11270000: TestBench Passed: expected value :wr_data = 46 and got value : rd_data = 46,half_wfull = 1,half_rempty = 0
+# Time = 11310000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 1,half_rempty = 0
+# Time = 11350000: TestBench Passed: expected value :wr_data = ad and got value : rd_data = ad,half_wfull = 1,half_rempty = 0
+# Time = 11390000: TestBench Passed: expected value :wr_data = de and got value : rd_data = de,half_wfull = 1,half_rempty = 0
+# Time = 11430000: TestBench Passed: expected value :wr_data = 1c and got value : rd_data = 1c,half_wfull = 1,half_rempty = 0
+# Time = 11470000: TestBench Passed: expected value :wr_data = 70 and got value : rd_data = 70,half_wfull = 1,half_rempty = 0
+# Time = 11510000: TestBench Passed: expected value :wr_data = 73 and got value : rd_data = 73,half_wfull = 1,half_rempty = 0
+# Time = 11550000: TestBench Passed: expected value :wr_data = 51 and got value : rd_data = 51,half_wfull = 1,half_rempty = 0
+# Time = 11590000: TestBench Passed: expected value :wr_data = f6 and got value : rd_data = f6,half_wfull = 1,half_rempty = 0
+# Time = 11630000: TestBench Passed: expected value :wr_data = ad and got value : rd_data = ad,half_wfull = 1,half_rempty = 0
+# Time = 11670000: TestBench Passed: expected value :wr_data = 1f and got value : rd_data = 1f,half_wfull = 1,half_rempty = 0
+# Time = 11710000: TestBench Passed: expected value :wr_data = e3 and got value : rd_data = e3,half_wfull = 1,half_rempty = 0
+# Time = 11750000: TestBench Passed: expected value :wr_data = bb and got value : rd_data = bb,half_wfull = 1,half_rempty = 0
+# Time = 11790000: TestBench Passed: expected value :wr_data = d6 and got value : rd_data = d6,half_wfull = 1,half_rempty = 0
+# Time = 11830000: TestBench Passed: expected value :wr_data = a7 and got value : rd_data = a7,half_wfull = 1,half_rempty = 0
+# Time = 11870000: TestBench Passed: expected value :wr_data = af and got value : rd_data = af,half_wfull = 1,half_rempty = 0
+# Time = 11910000: TestBench Passed: expected value :wr_data = 9f and got value : rd_data = 9f,half_wfull = 1,half_rempty = 0
+# Time = 11950000: TestBench Passed: expected value :wr_data = 03 and got value : rd_data = 03,half_wfull = 1,half_rempty = 0
+# Time = 11990000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 0
+# Time = 12030000: TestBench Passed: expected value :wr_data = 27 and got value : rd_data = 27,half_wfull = 1,half_rempty = 0
+# Time = 12070000: TestBench Passed: expected value :wr_data = e2 and got value : rd_data = e2,half_wfull = 1,half_rempty = 0
+# Time = 12110000: TestBench Passed: expected value :wr_data = d5 and got value : rd_data = d5,half_wfull = 1,half_rempty = 0
+# Time = 12150000: TestBench Passed: expected value :wr_data = d7 and got value : rd_data = d7,half_wfull = 1,half_rempty = 0
+# Time = 12190000: TestBench Passed: expected value :wr_data = 46 and got value : rd_data = 46,half_wfull = 1,half_rempty = 0
+# Time = 12230000: TestBench Passed: expected value :wr_data = c7 and got value : rd_data = c7,half_wfull = 1,half_rempty = 0
+# Time = 12270000: TestBench Passed: expected value :wr_data = 6f and got value : rd_data = 6f,half_wfull = 1,half_rempty = 0
+# Time = 12310000: TestBench Passed: expected value :wr_data = aa and got value : rd_data = aa,half_wfull = 1,half_rempty = 0
+# Time = 12350000: TestBench Passed: expected value :wr_data = 86 and got value : rd_data = 86,half_wfull = 1,half_rempty = 0
+# Time = 12390000: TestBench Passed: expected value :wr_data = db and got value : rd_data = db,half_wfull = 1,half_rempty = 0
+# Time = 12430000: TestBench Passed: expected value :wr_data = 2a and got value : rd_data = 2a,half_wfull = 1,half_rempty = 0
+# Time = 12470000: TestBench Passed: expected value :wr_data = fa and got value : rd_data = fa,half_wfull = 1,half_rempty = 0
+# Time = 12510000: TestBench Passed: expected value :wr_data = 09 and got value : rd_data = 09,half_wfull = 1,half_rempty = 0
+# Time = 12550000: TestBench Passed: expected value :wr_data = 27 and got value : rd_data = 27,half_wfull = 1,half_rempty = 0
+# Time = 12590000: TestBench Passed: expected value :wr_data = 90 and got value : rd_data = 90,half_wfull = 1,half_rempty = 0
+# Time = 12630000: TestBench Passed: expected value :wr_data = 1f and got value : rd_data = 1f,half_wfull = 1,half_rempty = 0
+# Time = 12670000: TestBench Passed: expected value :wr_data = 02 and got value : rd_data = 02,half_wfull = 1,half_rempty = 0
+# Time = 12710000: TestBench Passed: expected value :wr_data = ff and got value : rd_data = ff,half_wfull = 1,half_rempty = 0
+# Time = 12750000: TestBench Passed: expected value :wr_data = 1e and got value : rd_data = 1e,half_wfull = 1,half_rempty = 0
+# Time = 12790000: TestBench Passed: expected value :wr_data = 4c and got value : rd_data = 4c,half_wfull = 1,half_rempty = 0
+# Time = 12830000: TestBench Passed: expected value :wr_data = 25 and got value : rd_data = 25,half_wfull = 1,half_rempty = 0
+# Time = 12870000: TestBench Passed: expected value :wr_data = 8a and got value : rd_data = 8a,half_wfull = 1,half_rempty = 0
+# Time = 12910000: TestBench Passed: expected value :wr_data = 4c and got value : rd_data = 4c,half_wfull = 1,half_rempty = 0
+# Time = 12950000: TestBench Passed: expected value :wr_data = 0e and got value : rd_data = 0e,half_wfull = 1,half_rempty = 0
+# Time = 12990000: TestBench Passed: expected value :wr_data = a8 and got value : rd_data = a8,half_wfull = 1,half_rempty = 0
+# Time = 13030000: TestBench Passed: expected value :wr_data = 68 and got value : rd_data = 68,half_wfull = 1,half_rempty = 0
+# Time = 13070000: TestBench Passed: expected value :wr_data = 74 and got value : rd_data = 74,half_wfull = 1,half_rempty = 0
+# Time = 13110000: TestBench Passed: expected value :wr_data = 76 and got value : rd_data = 76,half_wfull = 1,half_rempty = 0
+# Time = 13150000: TestBench Passed: expected value :wr_data = 55 and got value : rd_data = 55,half_wfull = 1,half_rempty = 0
+# Time = 13190000: TestBench Passed: expected value :wr_data = 2c and got value : rd_data = 2c,half_wfull = 1,half_rempty = 0
+# Time = 13230000: TestBench Passed: expected value :wr_data = e1 and got value : rd_data = e1,half_wfull = 1,half_rempty = 0
+# Time = 13270000: TestBench Passed: expected value :wr_data = 4a and got value : rd_data = 4a,half_wfull = 1,half_rempty = 0
+# Time = 13310000: TestBench Passed: expected value :wr_data = 60 and got value : rd_data = 60,half_wfull = 1,half_rempty = 0
+# Time = 13350000: TestBench Passed: expected value :wr_data = 02 and got value : rd_data = 02,half_wfull = 1,half_rempty = 0
+# Time = 13390000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 0
+# Time = 13430000: TestBench Passed: expected value :wr_data = dd and got value : rd_data = dd,half_wfull = 1,half_rempty = 0
+# Time = 13470000: TestBench Passed: expected value :wr_data = f5 and got value : rd_data = f5,half_wfull = 1,half_rempty = 0
+# Time = 13510000: TestBench Passed: expected value :wr_data = c3 and got value : rd_data = c3,half_wfull = 1,half_rempty = 0
+# Time = 13550000: TestBench Passed: expected value :wr_data = 3e and got value : rd_data = 3e,half_wfull = 1,half_rempty = 0
+# Time = 13590000: TestBench Passed: expected value :wr_data = c0 and got value : rd_data = c0,half_wfull = 1,half_rempty = 0
+# Time = 13630000: TestBench Passed: expected value :wr_data = 7a and got value : rd_data = 7a,half_wfull = 1,half_rempty = 0
+# Time = 13670000: TestBench Passed: expected value :wr_data = c0 and got value : rd_data = c0,half_wfull = 1,half_rempty = 0
+# Time = 13710000: TestBench Passed: expected value :wr_data = 89 and got value : rd_data = 89,half_wfull = 1,half_rempty = 0
+# Time = 13750000: TestBench Passed: expected value :wr_data = 5e and got value : rd_data = 5e,half_wfull = 1,half_rempty = 0
+# Time = 13790000: TestBench Passed: expected value :wr_data = bd and got value : rd_data = bd,half_wfull = 1,half_rempty = 0
+# Time = 13830000: TestBench Passed: expected value :wr_data = 74 and got value : rd_data = 74,half_wfull = 1,half_rempty = 0
+# Time = 13870000: TestBench Passed: expected value :wr_data = b0 and got value : rd_data = b0,half_wfull = 1,half_rempty = 0
+# Time = 13910000: TestBench Passed: expected value :wr_data = c2 and got value : rd_data = c2,half_wfull = 1,half_rempty = 0
+# Time = 13950000: TestBench Passed: expected value :wr_data = a9 and got value : rd_data = a9,half_wfull = 1,half_rempty = 0
+# Time = 13990000: TestBench Passed: expected value :wr_data = 5f and got value : rd_data = 5f,half_wfull = 1,half_rempty = 0
+# Time = 14030000: TestBench Passed: expected value :wr_data = 77 and got value : rd_data = 77,half_wfull = 1,half_rempty = 0
+# Time = 14070000: TestBench Passed: expected value :wr_data = e1 and got value : rd_data = e1,half_wfull = 1,half_rempty = 0
+# Time = 14110000: TestBench Passed: expected value :wr_data = 2c and got value : rd_data = 2c,half_wfull = 1,half_rempty = 0
+# Time = 14150000: TestBench Passed: expected value :wr_data = 7a and got value : rd_data = 7a,half_wfull = 1,half_rempty = 0
+# Time = 14190000: TestBench Passed: expected value :wr_data = 33 and got value : rd_data = 33,half_wfull = 1,half_rempty = 0
+# Time = 14230000: TestBench Passed: expected value :wr_data = 31 and got value : rd_data = 31,half_wfull = 1,half_rempty = 0
+# Time = 14270000: TestBench Passed: expected value :wr_data = e8 and got value : rd_data = e8,half_wfull = 1,half_rempty = 0
+# Time = 14310000: TestBench Passed: expected value :wr_data = 89 and got value : rd_data = 89,half_wfull = 1,half_rempty = 0
+# Time = 14350000: TestBench Passed: expected value :wr_data = 72 and got value : rd_data = 72,half_wfull = 1,half_rempty = 0
+# Time = 14390000: TestBench Passed: expected value :wr_data = 41 and got value : rd_data = 41,half_wfull = 1,half_rempty = 0
+# Time = 14430000: TestBench Passed: expected value :wr_data = ca and got value : rd_data = ca,half_wfull = 1,half_rempty = 0
+# Time = 14470000: TestBench Passed: expected value :wr_data = 56 and got value : rd_data = 56,half_wfull = 1,half_rempty = 0
+# Time = 14510000: TestBench Passed: expected value :wr_data = a7 and got value : rd_data = a7,half_wfull = 1,half_rempty = 0
+# Time = 14550000: TestBench Passed: expected value :wr_data = 47 and got value : rd_data = 47,half_wfull = 1,half_rempty = 0
+# Time = 14590000: TestBench Passed: expected value :wr_data = 96 and got value : rd_data = 96,half_wfull = 1,half_rempty = 0
+# Time = 14630000: TestBench Passed: expected value :wr_data = 76 and got value : rd_data = 76,half_wfull = 1,half_rempty = 0
+# Time = 14670000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 1,half_rempty = 0
+# Time = 14710000: TestBench Passed: expected value :wr_data = 9f and got value : rd_data = 9f,half_wfull = 1,half_rempty = 0
+# Time = 14750000: TestBench Passed: expected value :wr_data = 63 and got value : rd_data = 63,half_wfull = 1,half_rempty = 0
+# Time = 14790000: TestBench Passed: expected value :wr_data = 85 and got value : rd_data = 85,half_wfull = 1,half_rempty = 0
+# Time = 14830000: TestBench Passed: expected value :wr_data = 2c and got value : rd_data = 2c,half_wfull = 1,half_rempty = 0
+# Time = 14870000: TestBench Passed: expected value :wr_data = 19 and got value : rd_data = 19,half_wfull = 1,half_rempty = 0
+# Time = 14910000: TestBench Passed: expected value :wr_data = 1a and got value : rd_data = 1a,half_wfull = 1,half_rempty = 0
+# Time = 14950000: TestBench Passed: expected value :wr_data = b6 and got value : rd_data = b6,half_wfull = 1,half_rempty = 0
+# Time = 14990000: TestBench Passed: expected value :wr_data = a8 and got value : rd_data = a8,half_wfull = 1,half_rempty = 0
+# Time = 15030000: TestBench Passed: expected value :wr_data = 47 and got value : rd_data = 47,half_wfull = 1,half_rempty = 0
+# Time = 15070000: TestBench Passed: expected value :wr_data = 20 and got value : rd_data = 20,half_wfull = 1,half_rempty = 0
+# Time = 15110000: TestBench Passed: expected value :wr_data = f6 and got value : rd_data = f6,half_wfull = 1,half_rempty = 0
+# Time = 15150000: TestBench Passed: expected value :wr_data = fa and got value : rd_data = fa,half_wfull = 1,half_rempty = 0
+# Time = 15190000: TestBench Passed: expected value :wr_data = e1 and got value : rd_data = e1,half_wfull = 1,half_rempty = 0
+# Time = 15230000: TestBench Passed: expected value :wr_data = 63 and got value : rd_data = 63,half_wfull = 1,half_rempty = 0
+# Time = 15270000: TestBench Passed: expected value :wr_data = 23 and got value : rd_data = 23,half_wfull = 1,half_rempty = 0
+# Time = 15310000: TestBench Passed: expected value :wr_data = 51 and got value : rd_data = 51,half_wfull = 1,half_rempty = 0
+# Time = 15350000: TestBench Passed: expected value :wr_data = d7 and got value : rd_data = d7,half_wfull = 1,half_rempty = 0
+# Time = 15390000: TestBench Passed: expected value :wr_data = 81 and got value : rd_data = 81,half_wfull = 1,half_rempty = 0
+# Time = 15430000: TestBench Passed: expected value :wr_data = 7f and got value : rd_data = 7f,half_wfull = 1,half_rempty = 0
+# Time = 15470000: TestBench Passed: expected value :wr_data = 87 and got value : rd_data = 87,half_wfull = 1,half_rempty = 0
+# Time = 15510000: TestBench Passed: expected value :wr_data = 1b and got value : rd_data = 1b,half_wfull = 1,half_rempty = 0
+# Time = 15550000: TestBench Passed: expected value :wr_data = fc and got value : rd_data = fc,half_wfull = 1,half_rempty = 0
+# Time = 15590000: TestBench Passed: expected value :wr_data = 13 and got value : rd_data = 13,half_wfull = 1,half_rempty = 0
+# Time = 15630000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 1,half_rempty = 0
+# Time = 15670000: TestBench Passed: expected value :wr_data = db and got value : rd_data = db,half_wfull = 1,half_rempty = 0
+# Time = 15710000: TestBench Passed: expected value :wr_data = f4 and got value : rd_data = f4,half_wfull = 1,half_rempty = 0
+# Time = 15750000: TestBench Passed: expected value :wr_data = dc and got value : rd_data = dc,half_wfull = 1,half_rempty = 0
+# Time = 15790000: TestBench Passed: expected value :wr_data = 4a and got value : rd_data = 4a,half_wfull = 1,half_rempty = 0
+# Time = 15830000: TestBench Passed: expected value :wr_data = 84 and got value : rd_data = 84,half_wfull = 1,half_rempty = 0
+# Time = 15870000: TestBench Passed: expected value :wr_data = 2d and got value : rd_data = 2d,half_wfull = 1,half_rempty = 0
+# Time = 15910000: TestBench Passed: expected value :wr_data = 79 and got value : rd_data = 79,half_wfull = 1,half_rempty = 0
+# Time = 15950000: TestBench Passed: expected value :wr_data = 1a and got value : rd_data = 1a,half_wfull = 1,half_rempty = 0
+# Time = 15990000: TestBench Passed: expected value :wr_data = 43 and got value : rd_data = 43,half_wfull = 1,half_rempty = 0
+# Time = 16030000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 1,half_rempty = 0
+# Time = 16070000: TestBench Passed: expected value :wr_data = d4 and got value : rd_data = d4,half_wfull = 1,half_rempty = 0
+# Time = 16110000: TestBench Passed: expected value :wr_data = 17 and got value : rd_data = 17,half_wfull = 1,half_rempty = 0
+# Time = 16150000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 1,half_rempty = 0
+# Time = 16190000: TestBench Passed: expected value :wr_data = 04 and got value : rd_data = 04,half_wfull = 1,half_rempty = 0
+# Time = 16230000: TestBench Passed: expected value :wr_data = 2a and got value : rd_data = 2a,half_wfull = 1,half_rempty = 0
+# Time = 16270000: TestBench Passed: expected value :wr_data = 36 and got value : rd_data = 36,half_wfull = 1,half_rempty = 0
+# Time = 16310000: TestBench Passed: expected value :wr_data = 04 and got value : rd_data = 04,half_wfull = 1,half_rempty = 0
+# Time = 16350000: TestBench Passed: expected value :wr_data = d2 and got value : rd_data = d2,half_wfull = 1,half_rempty = 0
+# Time = 16390000: TestBench Passed: expected value :wr_data = c6 and got value : rd_data = c6,half_wfull = 1,half_rempty = 0
+# Time = 16430000: TestBench Passed: expected value :wr_data = a2 and got value : rd_data = a2,half_wfull = 1,half_rempty = 0
+# Time = 16470000: TestBench Passed: expected value :wr_data = 61 and got value : rd_data = 61,half_wfull = 1,half_rempty = 0
+# Time = 16510000: TestBench Passed: expected value :wr_data = 78 and got value : rd_data = 78,half_wfull = 1,half_rempty = 0
+# Time = 16550000: TestBench Passed: expected value :wr_data = c0 and got value : rd_data = c0,half_wfull = 1,half_rempty = 0
+# Time = 16590000: TestBench Passed: expected value :wr_data = 75 and got value : rd_data = 75,half_wfull = 1,half_rempty = 0
+# Time = 16630000: TestBench Passed: expected value :wr_data = 39 and got value : rd_data = 39,half_wfull = 1,half_rempty = 0
+# Time = 16670000: TestBench Passed: expected value :wr_data = 6a and got value : rd_data = 6a,half_wfull = 1,half_rempty = 0
+# Time = 16710000: TestBench Passed: expected value :wr_data = 6d and got value : rd_data = 6d,half_wfull = 1,half_rempty = 0
+# Time = 16750000: TestBench Passed: expected value :wr_data = f6 and got value : rd_data = f6,half_wfull = 1,half_rempty = 0
+# Time = 16790000: TestBench Passed: expected value :wr_data = eb and got value : rd_data = eb,half_wfull = 1,half_rempty = 0
+# Time = 16830000: TestBench Passed: expected value :wr_data = 52 and got value : rd_data = 52,half_wfull = 1,half_rempty = 0
+# Time = 16870000: TestBench Passed: expected value :wr_data = c4 and got value : rd_data = c4,half_wfull = 1,half_rempty = 0
+# Time = 16910000: TestBench Passed: expected value :wr_data = 0a and got value : rd_data = 0a,half_wfull = 1,half_rempty = 0
+# Time = 16950000: TestBench Passed: expected value :wr_data = d9 and got value : rd_data = d9,half_wfull = 1,half_rempty = 0
+# Time = 16990000: TestBench Passed: expected value :wr_data = eb and got value : rd_data = eb,half_wfull = 1,half_rempty = 0
+# Time = 17030000: TestBench Passed: expected value :wr_data = ec and got value : rd_data = ec,half_wfull = 1,half_rempty = 0
+# Time = 17070000: TestBench Passed: expected value :wr_data = 12 and got value : rd_data = 12,half_wfull = 1,half_rempty = 0
+# Time = 17110000: TestBench Passed: expected value :wr_data = 88 and got value : rd_data = 88,half_wfull = 1,half_rempty = 0
+# Time = 17150000: TestBench Passed: expected value :wr_data = 64 and got value : rd_data = 64,half_wfull = 1,half_rempty = 0
+# Time = 17190000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 1,half_rempty = 0
+# Time = 17230000: TestBench Passed: expected value :wr_data = ee and got value : rd_data = ee,half_wfull = 1,half_rempty = 0
+# Time = 17270000: TestBench Passed: expected value :wr_data = be and got value : rd_data = be,half_wfull = 1,half_rempty = 0
+# Time = 17310000: TestBench Passed: expected value :wr_data = 2a and got value : rd_data = 2a,half_wfull = 1,half_rempty = 0
+# Time = 17350000: TestBench Passed: expected value :wr_data = 0a and got value : rd_data = 0a,half_wfull = 1,half_rempty = 0
+# Time = 17390000: TestBench Passed: expected value :wr_data = 48 and got value : rd_data = 48,half_wfull = 1,half_rempty = 0
+# Time = 17430000: TestBench Passed: expected value :wr_data = 38 and got value : rd_data = 38,half_wfull = 1,half_rempty = 0
+# Time = 17470000: TestBench Passed: expected value :wr_data = 51 and got value : rd_data = 51,half_wfull = 1,half_rempty = 0
+# Time = 17510000: TestBench Passed: expected value :wr_data = bd and got value : rd_data = bd,half_wfull = 1,half_rempty = 0
+# Time = 17550000: TestBench Passed: expected value :wr_data = f8 and got value : rd_data = f8,half_wfull = 1,half_rempty = 0
+# Time = 17590000: TestBench Passed: expected value :wr_data = 4e and got value : rd_data = 4e,half_wfull = 1,half_rempty = 0
+# Time = 17630000: TestBench Passed: expected value :wr_data = b2 and got value : rd_data = b2,half_wfull = 1,half_rempty = 0
+# Time = 17670000: TestBench Passed: expected value :wr_data = 00 and got value : rd_data = 00,half_wfull = 1,half_rempty = 0
+# Time = 17710000: TestBench Passed: expected value :wr_data = 89 and got value : rd_data = 89,half_wfull = 1,half_rempty = 0
+# Time = 17750000: TestBench Passed: expected value :wr_data = 5c and got value : rd_data = 5c,half_wfull = 1,half_rempty = 0
+# Time = 17790000: TestBench Passed: expected value :wr_data = 01 and got value : rd_data = 01,half_wfull = 1,half_rempty = 0
+# Time = 17830000: TestBench Passed: expected value :wr_data = 52 and got value : rd_data = 52,half_wfull = 1,half_rempty = 0
+# Time = 17870000: TestBench Passed: expected value :wr_data = 3b and got value : rd_data = 3b,half_wfull = 1,half_rempty = 0
+# Time = 17910000: TestBench Passed: expected value :wr_data = 4a and got value : rd_data = 4a,half_wfull = 1,half_rempty = 0
+# Time = 17950000: TestBench Passed: expected value :wr_data = ec and got value : rd_data = ec,half_wfull = 1,half_rempty = 0
+# Time = 17990000: TestBench Passed: expected value :wr_data = 74 and got value : rd_data = 74,half_wfull = 1,half_rempty = 0
+# Time = 18030000: TestBench Passed: expected value :wr_data = f0 and got value : rd_data = f0,half_wfull = 1,half_rempty = 0
+# Time = 18070000: TestBench Passed: expected value :wr_data = b8 and got value : rd_data = b8,half_wfull = 1,half_rempty = 0
+# Time = 18110000: TestBench Passed: expected value :wr_data = 86 and got value : rd_data = 86,half_wfull = 1,half_rempty = 0
+# Time = 18150000: TestBench Passed: expected value :wr_data = 18 and got value : rd_data = 18,half_wfull = 1,half_rempty = 0
+# Time = 18190000: TestBench Passed: expected value :wr_data = 45 and got value : rd_data = 45,half_wfull = 1,half_rempty = 0
+# Time = 18230000: TestBench Passed: expected value :wr_data = cd and got value : rd_data = cd,half_wfull = 1,half_rempty = 0
+# Time = 18270000: TestBench Passed: expected value :wr_data = 6c and got value : rd_data = 6c,half_wfull = 1,half_rempty = 0
+# Time = 18310000: TestBench Passed: expected value :wr_data = 20 and got value : rd_data = 20,half_wfull = 1,half_rempty = 0
+# Time = 18350000: TestBench Passed: expected value :wr_data = 0b and got value : rd_data = 0b,half_wfull = 1,half_rempty = 0
+# Time = 18390000: TestBench Passed: expected value :wr_data = 65 and got value : rd_data = 65,half_wfull = 1,half_rempty = 0
+# Time = 18430000: TestBench Passed: expected value :wr_data = 0e and got value : rd_data = 0e,half_wfull = 1,half_rempty = 0
+# Time = 18470000: TestBench Passed: expected value :wr_data = e5 and got value : rd_data = e5,half_wfull = 1,half_rempty = 0
+# Time = 18510000: TestBench Passed: expected value :wr_data = fc and got value : rd_data = fc,half_wfull = 1,half_rempty = 0
+# Time = 18550000: TestBench Passed: expected value :wr_data = f3 and got value : rd_data = f3,half_wfull = 1,half_rempty = 0
+# Time = 18590000: TestBench Passed: expected value :wr_data = 69 and got value : rd_data = 69,half_wfull = 1,half_rempty = 0
+# Time = 18630000: TestBench Passed: expected value :wr_data = 58 and got value : rd_data = 58,half_wfull = 1,half_rempty = 0
+# Time = 18670000: TestBench Passed: expected value :wr_data = 43 and got value : rd_data = 43,half_wfull = 1,half_rempty = 0
+# Time = 18710000: TestBench Passed: expected value :wr_data = 1b and got value : rd_data = 1b,half_wfull = 1,half_rempty = 0
+# Time = 18750000: TestBench Passed: expected value :wr_data = 08 and got value : rd_data = 08,half_wfull = 1,half_rempty = 0
+# Time = 18790000: TestBench Passed: expected value :wr_data = 66 and got value : rd_data = 66,half_wfull = 1,half_rempty = 0
+# Time = 18830000: TestBench Passed: expected value :wr_data = 46 and got value : rd_data = 46,half_wfull = 1,half_rempty = 0
+# Time = 18870000: TestBench Passed: expected value :wr_data = 00 and got value : rd_data = 00,half_wfull = 1,half_rempty = 0
+# Time = 18910000: TestBench Passed: expected value :wr_data = 46 and got value : rd_data = 46,half_wfull = 1,half_rempty = 0
+# Time = 18950000: TestBench Passed: expected value :wr_data = d1 and got value : rd_data = d1,half_wfull = 1,half_rempty = 0
+# Time = 18990000: TestBench Passed: expected value :wr_data = 44 and got value : rd_data = 44,half_wfull = 1,half_rempty = 0
+# Time = 19030000: TestBench Passed: expected value :wr_data = 48 and got value : rd_data = 48,half_wfull = 1,half_rempty = 0
+# Time = 19070000: TestBench Passed: expected value :wr_data = 45 and got value : rd_data = 45,half_wfull = 1,half_rempty = 0
+# Time = 19110000: TestBench Passed: expected value :wr_data = ab and got value : rd_data = ab,half_wfull = 1,half_rempty = 0
+# Time = 19150000: TestBench Passed: expected value :wr_data = ce and got value : rd_data = ce,half_wfull = 1,half_rempty = 0
+# Time = 19190000: TestBench Passed: expected value :wr_data = 2b and got value : rd_data = 2b,half_wfull = 1,half_rempty = 0
+# Time = 19230000: TestBench Passed: expected value :wr_data = ab and got value : rd_data = ab,half_wfull = 1,half_rempty = 0
+# Time = 19270000: TestBench Passed: expected value :wr_data = 03 and got value : rd_data = 03,half_wfull = 1,half_rempty = 0
+# Time = 19310000: TestBench Passed: expected value :wr_data = be and got value : rd_data = be,half_wfull = 1,half_rempty = 0
+# Time = 19350000: TestBench Passed: expected value :wr_data = 9b and got value : rd_data = 9b,half_wfull = 1,half_rempty = 0
+# Time = 19390000: TestBench Passed: expected value :wr_data = 29 and got value : rd_data = 29,half_wfull = 1,half_rempty = 0
+# Time = 19430000: TestBench Passed: expected value :wr_data = 3c and got value : rd_data = 3c,half_wfull = 1,half_rempty = 0
+# Time = 19470000: TestBench Passed: expected value :wr_data = fd and got value : rd_data = fd,half_wfull = 1,half_rempty = 0
+# Time = 19510000: TestBench Passed: expected value :wr_data = 6a and got value : rd_data = 6a,half_wfull = 1,half_rempty = 0
+# Time = 19550000: TestBench Passed: expected value :wr_data = 9f and got value : rd_data = 9f,half_wfull = 1,half_rempty = 0
+# Time = 19590000: TestBench Passed: expected value :wr_data = 95 and got value : rd_data = 95,half_wfull = 1,half_rempty = 0
+# Time = 19630000: TestBench Passed: expected value :wr_data = 29 and got value : rd_data = 29,half_wfull = 1,half_rempty = 0
+# Time = 19670000: TestBench Passed: expected value :wr_data = d3 and got value : rd_data = d3,half_wfull = 1,half_rempty = 0
+# Time = 19710000: TestBench Passed: expected value :wr_data = 6d and got value : rd_data = 6d,half_wfull = 1,half_rempty = 0
+# Time = 19750000: TestBench Passed: expected value :wr_data = c4 and got value : rd_data = c4,half_wfull = 1,half_rempty = 0
+# Time = 19790000: TestBench Passed: expected value :wr_data = dd and got value : rd_data = dd,half_wfull = 1,half_rempty = 0
+# Time = 19830000: TestBench Passed: expected value :wr_data = f9 and got value : rd_data = f9,half_wfull = 1,half_rempty = 0
+# Time = 19870000: TestBench Passed: expected value :wr_data = 8e and got value : rd_data = 8e,half_wfull = 1,half_rempty = 0
+# Time = 19910000: TestBench Passed: expected value :wr_data = 9a and got value : rd_data = 9a,half_wfull = 1,half_rempty = 0
+# Time = 19950000: TestBench Passed: expected value :wr_data = ab and got value : rd_data = ab,half_wfull = 1,half_rempty = 0
+# Time = 19990000: TestBench Passed: expected value :wr_data = fd and got value : rd_data = fd,half_wfull = 1,half_rempty = 0
+# Time = 20030000: TestBench Passed: expected value :wr_data = b9 and got value : rd_data = b9,half_wfull = 1,half_rempty = 0
+# Time = 20070000: TestBench Passed: expected value :wr_data = c3 and got value : rd_data = c3,half_wfull = 1,half_rempty = 0
+# Time = 20110000: TestBench Passed: expected value :wr_data = f9 and got value : rd_data = f9,half_wfull = 1,half_rempty = 0
+# Time = 20150000: TestBench Passed: expected value :wr_data = b1 and got value : rd_data = b1,half_wfull = 1,half_rempty = 0
+# Time = 20190000: TestBench Passed: expected value :wr_data = ce and got value : rd_data = ce,half_wfull = 1,half_rempty = 0
+# Time = 20230000: TestBench Passed: expected value :wr_data = db and got value : rd_data = db,half_wfull = 1,half_rempty = 0
+# Time = 20270000: TestBench Passed: expected value :wr_data = 83 and got value : rd_data = 83,half_wfull = 1,half_rempty = 0
+# Time = 20310000: TestBench Passed: expected value :wr_data = 6d and got value : rd_data = 6d,half_wfull = 1,half_rempty = 0
+# Time = 20350000: TestBench Passed: expected value :wr_data = a2 and got value : rd_data = a2,half_wfull = 1,half_rempty = 0
+# Time = 20390000: TestBench Passed: expected value :wr_data = 87 and got value : rd_data = 87,half_wfull = 1,half_rempty = 0
+# Time = 20430000: TestBench Passed: expected value :wr_data = 5e and got value : rd_data = 5e,half_wfull = 1,half_rempty = 0
+# Time = 20470000: TestBench Passed: expected value :wr_data = 18 and got value : rd_data = 18,half_wfull = 1,half_rempty = 0
+# Time = 20510000: TestBench Passed: expected value :wr_data = 72 and got value : rd_data = 72,half_wfull = 1,half_rempty = 0
+# Time = 20550000: TestBench Passed: expected value :wr_data = fa and got value : rd_data = fa,half_wfull = 1,half_rempty = 0
+# Time = 20590000: TestBench Passed: expected value :wr_data = 8d and got value : rd_data = 8d,half_wfull = 1,half_rempty = 0
+# Time = 20630000: TestBench Passed: expected value :wr_data = 5d and got value : rd_data = 5d,half_wfull = 1,half_rempty = 0
+# Time = 20670000: TestBench Passed: expected value :wr_data = a4 and got value : rd_data = a4,half_wfull = 1,half_rempty = 0
+# Time = 20710000: TestBench Passed: expected value :wr_data = b7 and got value : rd_data = b7,half_wfull = 1,half_rempty = 0
+# Time = 20750000: TestBench Passed: expected value :wr_data = e9 and got value : rd_data = e9,half_wfull = 1,half_rempty = 0
+# Time = 20790000: TestBench Passed: expected value :wr_data = ef and got value : rd_data = ef,half_wfull = 1,half_rempty = 0
+# Time = 20830000: TestBench Passed: expected value :wr_data = 0b and got value : rd_data = 0b,half_wfull = 1,half_rempty = 0
+# Time = 20870000: TestBench Passed: expected value :wr_data = 61 and got value : rd_data = 61,half_wfull = 1,half_rempty = 0
+# Time = 20910000: TestBench Passed: expected value :wr_data = c2 and got value : rd_data = c2,half_wfull = 1,half_rempty = 0
+# ** Note: $finish    : fifo1_tb.sv(71)
+#    Time: 20930050 ps  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at fifo1_tb.sv line 71
